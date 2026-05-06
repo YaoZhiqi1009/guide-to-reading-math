@@ -1,10 +1,214 @@
-# Guide to Reading Mathematics
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Guide to Reading Mathematics</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Times New Roman', serif;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #fefefe;
+        }
+        h1, h2, h3 { color: #1e3c72; }
+        .wrong {
+            background-color: #ffe6e6;
+            border-left: 5px solid #c00;
+            padding: 12px 20px;
+            margin: 20px 0;
+        }
+        .correct {
+            background-color: #e6ffe6;
+            border-left: 5px solid #0a0;
+            padding: 12px 20px;
+            margin: 20px 0;
+        }
+        .example {
+            background-color: #eef4ff;
+            border-left: 5px solid #1e3c72;
+            padding: 12px 20px;
+            margin: 20px 0;
+        }
+        hr { margin: 30px 0; }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            vertical-align: top;
+        }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
 
-Welcome to the web version.
+<h1>📖 Guide to Reading Mathematics</h1>
+<p><em>Based on HKU Teaching Development Grant project (Law, Boynton, Tait).<br>Web version with LaTeX support, designed for easy editing.</em></p>
 
-Here is a formula:  
-\[
-E = mc^2
-\]
+<hr>
 
-This site will be updated soon.
+<h2>1. Basic Principles</h2>
+
+<h3>1.1 Using Complete Sentences</h3>
+<div class="wrong">
+    ❌ <strong>Incorrect:</strong> Since \(x\) is positive. If this is not true. When two triangles are similar.
+</div>
+<div class="correct">
+    ✅ <strong>Correct:</strong> Since \(x\) is positive, we have \(x+1 > 1\).<br>
+    If this is not true, then the statement fails.<br>
+    When two triangles are similar, their corresponding angles are equal.
+</div>
+
+<h3>1.2 Starting Sentences with Capital Letters</h3>
+<div class="wrong">
+    ❌ \(p\) is not a prime number if it is divisible by 3 and greater than 3.
+</div>
+<div class="correct">
+    ✅ If the number \(p\) is divisible by 3 and greater than 3, then it is not a prime number.
+</div>
+
+<h3>1.3 Commas between Variables</h3>
+<div class="wrong">
+    ❌ In addition to \(p\) \(q\) is also a prime number.
+</div>
+<div class="correct">
+    ✅ In addition to \(p\), the number \(q\) is also prime.
+</div>
+
+<hr>
+
+<h2>2. The Use of English</h2>
+
+<h3>2.1 Grammar: Articles</h3>
+<table>
+    <tr><th>❌ Wrong</th><th>✅ Correct</th><th>Explanation</th></tr>
+    <tr><td>Construct a \(m \times n\) table.</td><td>Construct <strong>an</strong> \(m \times n\) table.</td><td>'m' starts with a vowel sound.</td></tr>
+    <tr><td>By binomial theorem</td><td>By <strong>the</strong> binomial theorem</td><td>Specific theorem.</td></tr>
+    <tr><td>By the Pythagoras' Theorem</td><td>By Pythagoras' Theorem</td><td>Named theorem → zero article.</td></tr>
+    <tr><td>Let \(x\) be the non-negative number.</td><td>Let \(x\) be <strong>a</strong> non-negative number.</td><td>'a' means any number.</td></tr>
+</table>
+
+<h3>2.2 Singular vs Plural</h3>
+<table>
+    <tr><th>❌ Wrong</th><th>✅ Correct</th></tr>
+    <tr><td>Every square <strong>are</strong> rectangles.</td><td>Every square <strong>is</strong> a rectangle.</td></tr>
+    <tr><td>Assume \(P(k)\) is true for some positive integers \(k\).</td><td>Assume \(P(k)\) is true for some positive integer \(k\).</td></tr>
+    <tr><td>Let \(A\) be a square <strong>matrice</strong>.</td><td>Let \(A\) be a square <strong>matrix</strong>.</td></tr>
+</table>
+
+<h3>2.3 Verb Forms</h3>
+<table>
+    <tr><th>❌ Wrong</th><th>✅ Correct</th></tr>
+    <tr><td>There <strong>exists</strong> real numbers \(m, n\) such that...</td><td>There <strong>exist</strong> real numbers \(m, n\) such that...</td></tr>
+    <tr><td>Replacing \(a\) by \(-a\), we have...</td><td>If we replace \(a\) by \(-a\), we have...</td></tr>
+    <tr><td>Hence we get \(x<0\), contradicts to (1).</td><td>Hence we get \(x<0\), which contradicts (1).</td></tr>
+</table>
+
+<hr>
+
+<h2>3. The Use of Symbols</h2>
+
+<h3>3.1 The Equality Sign \(=\)</h3>
+<div class="wrong">
+    ❌ derivative of \(x^2 = \frac{(x^2+2xh+h^2)-x^2}{h} = 2x\)
+</div>
+<div class="correct">
+    ✅ derivative of \(x^2 = \lim_{h\to 0} \frac{(x^2+2xh+h^2)-x^2}{h} = 2x\)
+</div>
+
+<h3>3.2 The Symbols \(\forall\) and \(\exists\)</h3>
+<table>
+    <tr><th>❌ Wrong</th><th>✅ Correct</th></tr>
+    <tr><td>\(\exists x \in \mathbb{R} \forall x > 1000\)</td><td>\(\exists x \in \mathbb{R} \text{ s.t. } x > 1000\)</td></tr>
+    <tr><td>\(\forall x \in \mathbb{R} \text{ s.t. } x^2 \ge 0\)</td><td>\(x^2 \ge 0 \; \forall x \in \mathbb{R}\)</td></tr>
+</table>
+
+<hr>
+
+<h2>4. Terminology by Topic</h2>
+
+<h3>4.1 Mathematical Induction</h3>
+<div class="wrong">
+    ❌ Assume \(S(k)\) is true <strong>for all</strong> positive integers \(k\).
+</div>
+<div class="correct">
+    ✅ Assume \(S(k)\) is true <strong>for some</strong> positive integer \(k\).
+</div>
+<div class="wrong">
+    ❌ \(S(k+1) = 1 + 2 + \dots + (k+1)\)
+</div>
+<div class="correct">
+    ✅ \(\text{LHS} = 1 + 2 + \dots + (k+1)\)
+</div>
+<div class="wrong">
+    ❌ By the <strong>principal</strong> of mathematical induction
+</div>
+<div class="correct">
+    ✅ By the <strong>principle</strong> of mathematical induction
+</div>
+
+<h3>4.2 Linear Algebra</h3>
+<table>
+    <tr><th>❌ Wrong</th><th>✅ Correct</th></tr>
+    <tr><td>The matrix \(A\) is rank 3.</td><td>The matrix \(A\) <strong>has rank</strong> 3.</td></tr>
+    <tr><td>Null \(A = 3\)</td><td>\(\dim(\operatorname{null} A) = 3\)</td></tr>
+    <tr><td>Hence \(x, y\) is a basis.</td><td>Hence \(\{x, y\}\) is a basis.</td></tr>
+</table>
+
+<hr>
+
+<h2>5. My Own Examples (Task 3c)</h2>
+
+<div class="example">
+    <strong>📌 Example 1: Describing Matrix Multiplication</strong><br>
+    Let \(A \in \mathbf{F}^{m \times n}\) and \(B \in \mathbf{F}^{n \times p}\).<br>
+    Then the product \(AB \in \mathbf{F}^{m \times p}\) is defined by:
+    \[
+    (AB)_{ij} = \sum_{k=1}^{n} A_{ik} B_{kj}
+    \]
+</div>
+
+<div class="example">
+    <strong>📌 Example 2: "e.g." vs "i.e."</strong><br>
+    <div class="wrong">❌ A prime number is <strong>e.g.</strong> 2, 3, 5.</div>
+    <div class="correct">
+        ✅ A prime number is a natural number greater than 1 with no positive divisors other than 1 and itself.<br>
+        <strong>For example</strong>, 2, 3, and 5 are prime numbers.<br>
+        ✅ 2 is the unique even prime number, <strong>i.e.</strong> the only prime divisible by 2.
+    </div>
+</div>
+
+<div class="example">
+    <strong>📌 Example 3: Logical Flow in Chain Equations</strong><br>
+    <div class="wrong">
+        ❌ Since \(x^4y^4/8 = 2\), we have \(x^4y^4 = (xy)^4 = 8 \times 2 = 16\).
+    </div>
+    <div class="correct">
+        ✅ Since \(x^4y^4/8 = 2\), we have \(x^4y^4 = 16\).<br>
+        Because \((xy)^4 = x^4y^4\), it follows that \((xy)^4 = 16\).
+    </div>
+</div>
+
+<hr>
+
+<h2>6. Handwriting Tips</h2>
+<ul>
+    <li>\(t\) vs \(+\) — make the crossbar on \(t\) longer.</li>
+    <li>\(\ln\) vs \(\mathrm{In}\) — write 'ln' clearly, not 'In'.</li>
+    <li>\(x\) vs \(x\) — use cursive \(x\) to avoid confusion with ×.</li>
+    <li>\(a\) vs \(2\) — close the loop on \(a\).</li>
+    <li>\(0\) vs \(6\) vs \(\sigma\) — distinguish by context.</li>
+</ul>
+
+<hr>
+
+<p><strong>💡 Editing Guide:</strong> To edit this page, open the HTML file in any text editor and modify the LaTeX inside \( ... \) or \[ ... \]. The page will automatically render formulas when reopened in a browser.</p>
+
+</body>
+</html>
